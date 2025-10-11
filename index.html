@@ -11,11 +11,11 @@
             display: grid;
             place-items: center;
             font-family: sans-serif;
-            background: #f6f7fb;
+            background: BlueViolet;
         }
         .card {
-            background: (#fff);
-            border: 1px solid #ddd;
+            background: BlueViolet;
+            border: 1px solid  BlueViolet;
             border-radius: 12px;
             padding: 20px;
             width: 320px;
@@ -25,8 +25,8 @@
             width: 100%;
             padding: 10px;
             border-radius: 8px;
-            border: 1px solid #bbb;
-            background: #eee;
+            border: 1px solid  BlueViolet;
+            background:  BlueViolet;
             cursor: pointer;
             font-size: 16px;
         }
@@ -41,12 +41,24 @@
     <div class="card">
         <h1>Surprise  Button</h1>
         <div id="surprise">🎉</div>
-        <button id="btn">Show Surprise</button>
+        <div class="row">
+        <button id="btnShow">Show Random</button>
+        <button id="btnAdd">Add the list</button>
+        <button id="btnClear">Clear List</button>
+        </div>
+        <h1>Your List</h1>
+        <ul id = "list">
+
+        </ul>
     </div>
 <script>
-    const btn = document.getElementById('btn')
+    const emojis = ['🎉','🥳','🎈']
+    const list = document.getElementById('list')
+    const btnShow = document.getElementById('btnShow')
     const surprise = document.getElementById('surprise')
-    btn.addEventListener('click', ()=>{
+    btnShow.addEventListener('click', ()=>{
+        const i = Math.floor(Math.random() * emojis.length)
+        surprise.textContent = emojis[i]
         const hidden = surprise.style.display == 'none'
         surprise.style.display = hidden ? 'block' : 'none'
         btn.textContent = hidden ? 'Hide Surprise' : 'Show Surprise'
