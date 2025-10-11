@@ -1,7 +1,6 @@
-# Homework 10/4/2025
+# Homework 10/11/2025
 
-Play around with changing colors in the style section. You can use worded color names such as blue, red, purple, etc..
-Refer to this link for a list of all color names: [CSS Colors](https://www.w3schools.com/cssref/css_colors.php)
+Add More emojis to the list inside of the script tag. Remember each emoji needs to have quotes and seperated by a comma. Also edit the colors in CSS. 
 
 ### ex:
 ```css
